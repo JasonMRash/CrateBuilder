@@ -10,18 +10,43 @@
     </div>
 
     <div class="col-xs-6">
-        <p>Inside Width: {{insideWidth}} inches<br />Inside Length: {{insideLength}} inches<br />Inside Height: {{insideHeight}} inches</p>
+        <p>
+            Inside Width: {{insideWidth}} inches<br />
+            Inside Length: {{insideLength}} inches<br />
+            Inside Height: {{insideHeight}} inches
+        </p>
 
-        <p>Crate Overall Width: {{outsideWidth}} inches<br />Crate Overall Length: {{outsideLength}} inches<br />Crate Overall Height: {{outsideHeight}} inches</p>
+        <p>
+            Crate Overall Width: {{outsideWidth}} inches<br />
+            Crate Overall Length: {{outsideLength}} inches<br />
+            Crate Overall Height: {{outsideHeight}} inches
+        </p>
 
-        <p><strong>Base Assem TEMPLATE</strong>Base Runner Length: {{runnerLength}} inches<br />Base Slat Length: {{slatLength}} inches<br />
-        The pallet requires {{numRunners}} runners spaced  inches apart.<br />The pallet requires  slats spaced  inches apart.</p>
+        <p>
+            <strong>Base Assem TEMPLATE</strong><br />
+            Base Runner Length: {{runnerLength}} inches<br />
+            Base Slat Length: {{slatLength}} inches<br />
+            The pallet requires {{numRunners}} runners spaced {{palletRunnerSpacing}} inches apart.<br />
+            The pallet requires {{numSlats}} slats spaced {{palletSlatSpacing}} inches apart.
+        </p>
 
-        <p><strong>Side Assem TEMPLATE</strong><br />Side Top Panel Rail Length:  inches<br />Side Panel Vert Rail Length:  inches</p>
+        <p>
+            <strong>Side Assem TEMPLATE</strong><br />
+            Side Top Panel Rail Length: {{sideTopRailLength}} inches<br />
+            Side Panel Vert Rail Length: {{sideVertRailLength}} inches
+        </p>
 
-        <p><strong>End Assem TEMPLATE</strong><br /></p>
-
-        <p><strong>Top Assem TEMPLATE</strong></p>
+        <p>
+            <strong>End Assem TEMPLATE</strong><br />
+            End Top Panel Rail Length: {{endTopRailLength}} inches<br />
+            End Panel Vert Rail Length: {{endVertRailLength}} inches
+        </p>
+        
+        <p>
+            <strong>Top Assem TEMPLATE</strong><br />
+            End Top Panel Rail Length: {{endTopRailLength}} inches<br />
+            Side Top Panel Rail Length: {{sideTopRailLength}} inches
+        </p>
     </div>
 </div>
 

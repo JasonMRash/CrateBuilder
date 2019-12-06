@@ -4,50 +4,11 @@ Routes and views for the flask application.
 
 from datetime import datetime
 from flask import render_template
-from JasonRashWebsite import app
+from CrateBuilder import app
 from flask import request
-from JasonRashWebsite import crate
+from CrateBuilder import crate
 
 @app.route('/')
-@app.route('/home')
-def home():
-    """Renders the home page."""
-    return render_template(
-        'index.html',
-        title='Home',
-        year=datetime.now().year,
-    )
-
-@app.route('/projects')
-def projects():
-    """Renders the projects page."""
-    return render_template(
-        'projects.html',
-        title='Projects',
-        year=datetime.now().year,
-        message=''
-    )
-
-@app.route('/resume')
-def resume():
-    """Renders the resume page."""
-    return render_template(
-        'resume.html',
-        title='Resume',
-        year=datetime.now().year,
-        message=''
-    )
-
-@app.route('/about')
-def about():
-    """Renders the about page."""
-    return render_template(
-        'about.html',
-        title='About',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
-
 @app.route('/cratebuilder', methods=['GET', 'POST'])
 def crateBuilder():
     """Renders the crate builder page."""
@@ -55,7 +16,7 @@ def crateBuilder():
         'cratebuilder.html',
         title='Crate Builder',
         year=datetime.now().year,
-        message='Type in the inside dimensions of a crate in the form below.'  
+        message='Type in the required inside dimensions of a crate in inches.'  
     )
 
 @app.route('/cratecalc', methods=['GET', 'POST'])
@@ -69,7 +30,7 @@ def crateCalc():
         endBraces=request.form.get('end_braces')
         numRunners=request.form.get('num_runners')
 
-    newCrate = crate.Crate(insideWidth, insideLength, insideHeight, sideBraces, endBraces)
+    newCrate = crate.Crate(insideWidth, insideLength, insideHeight, sideBraces, endBraces, numRunners)
 
     # Calculate Outside Crate Dimensions
 
@@ -81,12 +42,19 @@ def crateCalc():
 
     slatLength=insideWidth
     runnerLength=insideLength
+    palletSlatSpacing=newCrate.palletSlatSpacing()
+    numSlats=newCrate.numSlats()
+    pallerRunnerSpacing=newCrate.palletRunnerSpacing()
 
     # Calculate Side Board Dimensions
 
+    sideTopRailLength=newCrate.sideTopRailLength()
+    sideVertRailLength=newCrate.sideVertRailLength()
+
     # Calculate End Board Dimensions
 
-    # Calculate Top Board Dimensions
+    endTopRailLength=newCrate.endTopRailLength()
+    endVertRailLength=newCrate.endVertRailLength()
 
     return render_template(
         'cratecalc.html',

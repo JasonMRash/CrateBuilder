@@ -3,7 +3,7 @@ This script runs the JasonRashWebsite application using a development server.
 """
 
 from os import environ
-from JasonRashWebsite import app
+from CrateBuilder import app
 
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', 'localhost')
