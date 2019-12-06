@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+<div class="row">
+    <div class="col-xs-6">
+        <img id="crateTemplate" src="../static/img/projects/Crate Assem TEMPLATE.JPG" />
+    </div>
+
+    <div class="col-xs-6">
+        <form action="/cratecalc" method="post">
+            <div>
+                <label for="insideWidth">Inside Width:</label>
+                <input type="number" step="any" min="0" id="insideWidth" name="inside_width" required>
+            </div>
+            <div>
+                <label for="insideLength">Inside Length:</label>
+                <input type="number" step="any" min="0" id="insideLength" name="inside_length" required>
+            </div>
+            <div>
+                <label for="insideHeight">Crate Inside Height:</label>
+                <input type="number" step="any" min="0" id="insideHeight" name="inside_height" required>
+            </div>
+            <div>
+                <label for="sideBracesYes">Side Braces Required: Yes</label>
+                <input type="radio" id="sideBracesYes" name="side_braces" value=1 />
+                <label for="sideBracesNo">No</label>
+                <input type="radio" id="sideBracesNo" name="side_braces" value=0 checked />
+            </div>
+            <div>
+                <label for="endBracesYes">End Braces Required: Yes</label>
+                <input type="radio" id="endBracesYes" name="end_braces" value=1 />
+                <label for="endBracesNo">No</label>
+                <input type="radio" id="endBracesNo" name="end_braces" value=0 checked />
+            </div>
+            <div>
+            <label for="numRunners">Number of Runners for Pallet:</label>
+            <input type="number" step="any" min="2" max="4" id="numRunners" name="num_runners" required>
+            </div>
+            <div class="button">
+                <button type="submit">Submit Inside Dimensions</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+        {% endblock %}

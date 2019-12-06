@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+<div class="row">
+    <div class="col-xs-6">
+        <img id="crateExplode" src="../static/img/projects/Crate Assem TEMPLATE Explode.JPG" />
+    </div>
+
+    <div class="col-xs-6">
+        <p>Inside Width: {{insideWidth}} inches<br />Inside Length: {{insideLength}} inches<br />Inside Height: {{insideHeight}} inches</p>
+
+        <p>Crate Overall Width: {{outsideWidth}} inches<br />Crate Overall Length: {{outsideLength}} inches<br />Crate Overall Height: {{outsideHeight}} inches</p>
+
+        <p><strong>Base Assem TEMPLATE</strong>Base Runner Length: {{runnerLength}} inches<br />Base Slat Length: {{slatLength}} inches<br />
+        The pallet requires {{numRunners}} runners spaced  inches apart.<br />The pallet requires  slats spaced  inches apart.</p>
+
+        <p><strong>Side Assem TEMPLATE</strong><br />Side Top Panel Rail Length:  inches<br />Side Panel Vert Rail Length:  inches</p>
+
+        <p><strong>End Assem TEMPLATE</strong><br /></p>
+
+        <p><strong>Top Assem TEMPLATE</strong></p>
+    </div>
+</div>
+
+        {% endblock %}
