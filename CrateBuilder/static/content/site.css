@@ -33,9 +33,6 @@ input[type="checkbox"].input-validation-error {
     border: 0 none;
 }
 
-navbar {
-    background-color: #D3D3D3;
-}
 .validation-summary-errors {
     color: #b94a48;
 }
@@ -92,8 +89,10 @@ textarea {
     padding-left: 90px; /* same size as the label elements */
 }
 
-#sideBraces, #endBraces {
-    width: auto;
+input[type=radio] {
+    border: 0px;
+    width: 2em;
+    height: 2em;
 }
 
 button {

@@ -4,20 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Jason Rash</title>
-    <link rel="stylesheet" type="text/css" href="../static/content/bootstrap.min.css" />
-    <link type="text/css" href="../static/content/site.css" rel="stylesheet" />
-    <script src="../static/scripts/modernizr-2.6.2.js"></script>
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="..\static\content\site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top navbar-inverse">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>
                 <a href="/" class="navbar-brand">Crate Builder by Jason Rash</a>
             </div>
             <div class="navbar-collapse collapse">
@@ -36,9 +34,6 @@
         </footer>
     </div>
 
-    <script src="/static/scripts/jquery-1.10.2.js"></script>
-    <script src="/static/scripts/bootstrap.js"></script>
-    <script src="/static/scripts/respond.js"></script>
     {% block scripts %}{% endblock %}
 
 </body>
