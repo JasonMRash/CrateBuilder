@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+<div class="row">
+    <div class="col-xs-6">
+        <img id="crateTemplate" src="../static/img/Crate Assem TEMPLATE.JPG" />
+    </div>
+
+    <div class="col-xs-6">
+        <p><strong>Crate Builder</strong> by Jason Rash</p>
+        
+        <p>This project started out as a C++ console application, then was later turned into a Flask web app.  The idea
+        for the project came about when I was creating shipping crate drawings using SOLIDWORKS (3D CAD design software).
+        </p>
+    </div>
+</div>
+
+        {% endblock %}

@@ -12,11 +12,11 @@
     <div class="col-xs-6">
         <form action="/cratecalc" method="post">
             <div>
-                <label for="insideWidth">Inside Width:</label>
+                <label for="insideWidth">Crate Inside Width:</label>
                 <input type="number" step="any" min="0" id="insideWidth" name="inside_width" required>
             </div>
             <div>
-                <label for="insideLength">Inside Length:</label>
+                <label for="insideLength">Crate Inside Length:</label>
                 <input type="number" step="any" min="0" id="insideLength" name="inside_length" required>
             </div>
             <div>
@@ -26,21 +26,21 @@
             <div>
                 <label for="sideBracesYes">Side Braces Required: Yes</label>
                 <input type="radio" id="sideBracesYes" name="side_braces" value=1 />
-                <label for="sideBracesNo">No</label>
+                <span>No</span>
                 <input type="radio" id="sideBracesNo" name="side_braces" value=0 checked />
             </div>
             <div>
                 <label for="endBracesYes">End Braces Required: Yes</label>
                 <input type="radio" id="endBracesYes" name="end_braces" value=1 />
-                <label for="endBracesNo">No</label>
+                <span>No</span>
                 <input type="radio" id="endBracesNo" name="end_braces" value=0 checked />
             </div>
             <div>
-            <label for="numRunners">Number of Runners for Pallet:</label>
+            <label for="numRunners">Number of Pallet Runners:</label>
             <input type="number" step="any" min="2" max="4" id="numRunners" name="num_runners" required>
             </div>
-            <div class="button">
-                <button type="submit">Submit Inside Dimensions</button>
+            <div class="button" id="submitDimensions">
+                <button id="submitDimensions" type="submit">Submit Inside Dimensions</button>
             </div>
         </form>
     </div>

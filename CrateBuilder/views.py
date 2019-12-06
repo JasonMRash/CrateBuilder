@@ -16,7 +16,7 @@ def crateBuilder():
         'cratebuilder.html',
         title='Crate Builder',
         year=datetime.now().year,
-        message='Type in the required inside dimensions of a crate in inches.'  
+        message='Type in inside dimensions of crate in inches'  
     )
 
 @app.route('/cratecalc', methods=['GET', 'POST'])
@@ -60,7 +60,7 @@ def crateCalc():
         'cratecalc.html',
         title='Crate Builder Calculations',
         year=datetime.now().year,
-        message='Here are the dimensions to make the crate drawings.',
+        message='Calculated dimensions for crate drawings',
         insideLength=insideLength,
         insideWidth=insideWidth,
         insideHeight=insideHeight,
@@ -77,4 +77,14 @@ def crateCalc():
         sideVertRailLength=sideVertRailLength,
         endTopRailLength=endTopRailLength,
         endVertRailLength=endVertRailLength
+    )
+
+@app.route('/about')
+def about():
+    """Renders the crate builder page."""
+    return render_template(
+        'about.html',
+        title='About Crate Builder',
+        year=datetime.now().year,
+        message='Why I created this project'  
     )
