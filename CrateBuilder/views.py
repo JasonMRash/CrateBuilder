@@ -44,7 +44,7 @@ def crateCalc():
     runnerLength=insideLength
     palletSlatSpacing=newCrate.palletSlatSpacing()
     numSlats=newCrate.numSlats()
-    pallerRunnerSpacing=newCrate.palletRunnerSpacing()
+    palletRunnerSpacing=newCrate.palletRunnerSpacing()
 
     # Calculate Side Board Dimensions
 
