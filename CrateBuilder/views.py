@@ -69,5 +69,12 @@ def crateCalc():
         outsideHeight=outsideHeight,
         slatLength=slatLength,
         runnerLength=runnerLength,
-        numRunners=numRunners
+        numRunners=numRunners,
+        palletSlatSpacing=palletSlatSpacing,
+        numSlats=numSlats,
+        palletRunnerSpacing=palletRunnerSpacing,
+        sideTopRailLength=sideTopRailLength,
+        sideVertRailLength=sideVertRailLength,
+        endTopRailLength=endTopRailLength,
+        endVertRailLength=endVertRailLength
     )

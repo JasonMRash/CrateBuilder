@@ -68,4 +68,4 @@ class Crate:
 
     def endVertRailLength(self):
         endVertRailLength = self.outsideHeight - (2 * Crate.SLAT_THICKNESS)
-
+        return endVertRailLength
