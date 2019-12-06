@@ -26,25 +26,21 @@
             <div>
                 <label for="sideBracesYes">Side Braces Required: Yes</label>
                 <input type="radio" id="sideBracesYes" name="side_braces" value=1 />
-            </div>
-            <div>
-                <label for="sideBracesNo">No</label>
+                <span>No</span>
                 <input type="radio" id="sideBracesNo" name="side_braces" value=0 checked />
             </div>
             <div>
                 <label for="endBracesYes">End Braces Required: Yes</label>
                 <input type="radio" id="endBracesYes" name="end_braces" value=1 />
-            </div>
-            <div>
-                <label for="endBracesNo">No</label>
+                <span>No</span>
                 <input type="radio" id="endBracesNo" name="end_braces" value=0 checked />
             </div>
             <div>
             <label for="numRunners">Number of Pallet Runners:</label>
             <input type="number" step="any" min="2" max="4" id="numRunners" name="num_runners" required>
             </div>
-            <div class="button">
-                <button type="submit">Submit Inside Dimensions</button>
+            <div class="button" id="submitDimensions">
+                <button id="submitDimensions" type="submit">Submit Inside Dimensions</button>
             </div>
         </form>
     </div>

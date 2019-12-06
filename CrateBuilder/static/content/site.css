@@ -1,46 +1,3 @@
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 20px;
-}
-
-/* styles for validation helpers */
-.field-validation-error {
-    color: #b94a48;
-}
-
-.field-validation-valid {
-    display: none;
-}
-
-input.input-validation-error {
-    border: 1px solid #b94a48;
-}
-
-input[type="checkbox"].input-validation-error {
-    border: 0 none;
-}
-
-.validation-summary-errors {
-    color: #b94a48;
-}
-
-.validation-summary-valid {
-    display: none;
-}
-
 form {
     /* Form outline */
     padding: 1em;
@@ -48,49 +5,13 @@ form {
     border-radius: 1em;
 }
 
-    form div + div {
-        margin-top: 1em;
-    }
-
 label {
     /* Uniform size & alignment */
     display: inline-block;
-    width: 250px;
+    width: 200px;
     text-align: right;
 }
 
-input,
-textarea {
-    /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-    font: 1em sans-serif;
-    /* Uniform text field size */
-    width: 20px;
-    box-sizing: border-box;
-    /* Match form field borders */
-    border: 1px solid #999;
-}
-
-input:focus,
-textarea:focus {
-        /* Additional highlight for focused elements */
-        border-color: #000;
-    }
-
-textarea {
-    /* Align multiline text fields with their labels */
-    vertical-align: top;
-    /* Provide space to type some text */
-    height: 5em;
-}
-
-.button {
-    /* Align buttons with the text fields */
-    padding-left: 90px; /* same size as the label elements */
-}
-
-button {
-    /* This extra margin represent roughly the same space as the space
-     between the labels and their text fields */
-    margin-left: .5em;
+#submitDimensions {
+    text-align: center;
 }
