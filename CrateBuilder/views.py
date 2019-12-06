@@ -78,3 +78,13 @@ def crateCalc():
         endTopRailLength=endTopRailLength,
         endVertRailLength=endVertRailLength
     )
+
+@app.route('/about')
+def about():
+    """Renders the crate builder page."""
+    return render_template(
+        'about.html',
+        title='About Crate Builder',
+        year=datetime.now().year,
+        message='Why I created this project.'  
+    )
