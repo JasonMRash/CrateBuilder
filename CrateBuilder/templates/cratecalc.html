@@ -5,11 +5,11 @@
 <h2>{{ title }}</h2>
 <h3>{{ message }}</h3>
 <div class="row">
-    <div class="col-xs-6">
-        <img id="crateExplode" src="../static/img/Crate Assem TEMPLATE Explode.JPG" />
+    <div class="col">
+        <img class="img-fluid" id="crateExplode" src="../static/img/Crate Assem TEMPLATE Explode.JPG" />
     </div>
 
-    <div class="col-xs-6">
+    <div class="col">
         <p>
             Inside Width: {{insideWidth}} inches<br />
             Inside Length: {{insideLength}} inches<br />
@@ -26,8 +26,8 @@
             <strong>Base Assem TEMPLATE</strong><br />
             Base Runner Length: {{runnerLength}} inches<br />
             Base Slat Length: {{slatLength}} inches<br />
-            The pallet requires {{numRunners}} runners spaced {{palletRunnerSpacing}} inches apart.<br />
-            The pallet requires {{numSlats}} slats spaced {{palletSlatSpacing}} inches apart.
+            The pallet requires {{numRunners}} runners spaced {{palletRunnerSpacing|round(2,'common')}} inches apart.<br />
+            The pallet requires {{numSlats}} slats spaced {{palletSlatSpacing|round(2,'common')}} inches apart.
         </p>
 
         <p>
