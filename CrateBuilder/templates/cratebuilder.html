@@ -6,45 +6,59 @@
 <h3>{{ message }}</h3>
 <div class="row">
     <div class="col">
-        <img class="img-fluid" id="crateTemplate" src="../static/img/Crate Assem TEMPLATE.JPG" />
+        <img id="crateTemplate" src="../static/img/Crate Assem TEMPLATE.JPG" />
     </div>
 
     <div class="col">
         <form action="/cratecalc" method="post">
-            <div>
-                <label for="insideWidth">Crate Inside Width:</label>
-                <input type="number" step="any" min="12" id="insideWidth" name="inside_width" required>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="insideWidth">Crate Inside Width</label>
+                    <input type="number" step="any" min="12" id="insideWidth" name="inside_width" placeholder="In Inches" required>
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="insideLength">Crate Inside Length:</label>
+                    <input type="number" step="any" min="12" id="insideLength" name="inside_length" placeholder="In Inches" required>
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="insideHeight">Crate Inside Height:</label>
+                    <input type="number" step="any" min="12" id="insideHeight" name="inside_height" placeholder="In Inches" required>
+                </div> 
             </div>
             <div>
-                <label for="insideLength">Crate Inside Length:</label>
-                <input type="number" step="any" min="12" id="insideLength" name="inside_length" required>
+                <label for="sideBraces">Side Braces Required</label>
+                <div class="form-check form-check-inline">
+                    <label for="sideBracesYes">Yes</label>
+                    <input type="radio" id="sideBracesYes" name="side_braces" value=1 />
+                    <label for="sideBracesNo">No</label>
+                    <input type="radio" id="sideBracesNo" name="side_braces" value=0 checked />
+                </div>
             </div>
             <div>
-                <label for="insideHeight">Crate Inside Height:</label>
-                <input type="number" step="any" min="12" id="insideHeight" name="inside_height" required>
+                <label for="endBraces">End Braces Required</label>
+                <div class="form-check form=check-inline">
+                    <label for="endBracesYes">Yes</label>
+                    <input type="radio" id="endBracesYes" name="end_braces" value=1 />
+                    <label for="endBracesNo">No</label>
+                    <input type="radio" id="endBracesNo" name="end_braces" value=0 checked />
+                </div>        
             </div>
-            <div>
-                <label for="sideBracesYes">Side Braces Required:</label>
-                <span>Yes</span>
-                <input type="radio" id="sideBracesYes" name="side_braces" value=1 />
-                <span>No</span>
-                <input type="radio" id="sideBracesNo" name="side_braces" value=0 checked />
-            </div>
-            <div>
-                <label for="endBracesYes">End Braces Required:</label>
-                <span>Yes</span>
-                <input type="radio" id="endBracesYes" name="end_braces" value=1 />
-                <span>No</span>
-                <input type="radio" id="endBracesNo" name="end_braces" value=0 checked />
-            </div>
-            <div>
-            <label for="numRunners">Number of Pallet Runners:</label>
-            <input type="number" step="any" min="2" max="4" id="numRunners" name="num_runners" required>
-            </div>
-            <div class="button" id="submitDimensions">
-                <button id="submitDimensions" type="submit">Submit Inside Dimensions</button>
-            </div>
-        </form>
+                <div class="form-group">
+                    <label for="numRunners">Number of Pallet Runners:</label>
+                    <select multiple class="form-control" id="numRunners" required>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="button" id="submitDimensions">
+                    <button id="submitDimensions" type="submit">Submit Inside Dimensions</button>
+                </div>
+</form>
     </div>
 </div>
 
