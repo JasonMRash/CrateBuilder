@@ -16,7 +16,7 @@ def crateBuilder():
         'cratebuilder.html',
         title='Crate Builder',
         year=datetime.now().year,
-        message='Type in inside dimensions of crate in inches'  
+        message='Type inside dimensions of crate in inches'  
     )
 
 @app.route('/cratecalc', methods=['GET', 'POST'])
