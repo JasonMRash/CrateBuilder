@@ -15,7 +15,3 @@ label {
 #submitDimensions {
     text-align: center;
 }
-
-input[type=number] {
-    width: 100px;
-} 
