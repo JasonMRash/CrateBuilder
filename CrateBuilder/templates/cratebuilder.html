@@ -23,19 +23,23 @@
                 <label for="insideHeight">Crate Inside Height:</label>
                 <input type="number" step="any" min="12" id="insideHeight" name="inside_height" placeholder="In Inches" required>
             </div> 
-            <div class="form-check">
-                <label for="sideBraces">Side Braces Required:</label>
-                <span>Yes</span>
-                <input type="radio" id="sideBracesYes" name="side_braces" value=1 />
-                <span>No</span>
-                <input type="radio" id="sideBracesNo" name="side_braces" value=0 checked />
+            <div class="form-group">
+                <label for="sideBraces">Side Braces:</label>
+                <div class="form-check form-check-inline">
+                    <span>Yes</span>
+                    <input type="radio" id="sideBracesYes" name="side_braces" value=1 />
+                    <span>No</span>
+                    <input type="radio" id="sideBracesNo" name="side_braces" value=0 checked />
+                </div>
             </div>
-            <div class="form-check">
-                <label for="endBraces">End Braces Required:</label>
-                <span>Yes</span>
-                <input type="radio" id="endBracesYes" name="end_braces" value=1 />
-                <span>No</span>
-                <input type="radio" id="endBracesNo" name="end_braces" value=0 checked />
+            <div class="form-group">
+                <label for="endBraces">End Braces:</label>
+                <div class="form-check form-check-inline">
+                    <span>Yes</span>
+                    <input type="radio" id="endBracesYes" name="end_braces" value=1 />
+                    <span>No</span>
+                    <input type="radio" id="endBracesNo" name="end_braces" value=0 checked />
+                </div>
             </div>
             <div class="form-group">
                 <label for="numRunners">Number of Pallet Runners:</label>
