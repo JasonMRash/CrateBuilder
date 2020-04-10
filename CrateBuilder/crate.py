@@ -32,22 +32,22 @@ class Crate:
         outsideHeight = self.insideHeight + (Crate.SLAT_THICKNESS * 4) + Crate.SLAT_WIDTH
         return outsideHeight
 
-    # This function calculates the spacing of slats for a pallet with a max of 2" between each slat.
+    # This function calculates the spacing of slats for a pallet with a max of 2 1/2" between each slat.
     def palletSlatSpacing(self):
         numSlats = 1 #Value to start with (at first calculation numSlats is 2.
-        palletSlatSpacing = 3 # Value greater than 2 to start with
-        while palletSlatSpacing > 2:
+        palletSlatSpacing = 3.5 # Value greater than 2 to start with
+        while palletSlatSpacing > 2.5:
             numSlats += 1
-            palletSlatSpacing = (self.insideWidth - (numSlats * Crate.SLAT_WIDTH)) / (numSlats - 1)
+            palletSlatSpacing = (self.insideLength - (numSlats * Crate.SLAT_WIDTH)) / (numSlats - 1)
         return palletSlatSpacing
 
     # same as slatSpacing function but it returns number of slats instead of slat spacing
     def numSlats(self):
         numSlats = 1 #Value to start with (at first calculation numSlats is 2.
-        palletSlatSpacing = 3 # Value greater than 2 to start with
-        while palletSlatSpacing > 2:
+        palletSlatSpacing = 3.5 # Value greater than 2 to start with
+        while palletSlatSpacing > 2.5:
             numSlats += 1
-            palletSlatSpacing = (self.insideWidth - (numSlats * Crate.SLAT_WIDTH)) / (numSlats - 1)
+            palletSlatSpacing = (self.insideLength - (numSlats * Crate.SLAT_WIDTH)) / (numSlats - 1)
         return numSlats
 
     def palletRunnerSpacing(self):
