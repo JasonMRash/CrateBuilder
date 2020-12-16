@@ -12,9 +12,9 @@ class Crate:
         self.insideHeight = float(iHeight)
         if float(sBrace) == 0:
             self.sideBrace = 0
-        elif float(sBrace) == 1:
+        elif int(sBrace) == 1:
             self.sideBrace = Crate.SLAT_THICKNESS * 2
-        if float(eBrace) == 0:
+        if int(eBrace) == 0:
             self.endBrace = 0
         elif int(eBrace) == 1:
             self.endBrace = Crate.SLAT_THICKNESS * 2
